@@ -1,0 +1,21 @@
+<table>
+    <tr>
+        <td><label for="login">Login : </label></td>
+        <td><input id="login" [(ngModel)]="login" placeholder="login"></td>
+    </tr>
+    <tr>
+        <td><label for="password">Password : </label></td>
+        <td><input type="password" placeholder="password" [(ngModel)]="password"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align: right;"><button type="button" (click)="authenticate()">Connect</button></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <div *ngIf="errorMessage!=''" class="alert alert-danger" role="alert">
+                {{errorMessage}}
+            </div>
+        </td>
+    </tr>
+</table>
